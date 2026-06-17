@@ -56,7 +56,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aarav Mehta — Premium Freelance Web Developer & Website Marketplace" },
+      { title: "Aarav Mehta — Premium Freelance Web Developer" },
       { name: "description", content: "Freelance web developer crafting premium business sites, portfolios and e‑commerce. Browse ready‑made websites for sale from ₹10,000." },
       { name: "author", content: "Aarav Mehta" },
       { name: "theme-color", content: "#1a0b2e" },
