@@ -721,6 +721,19 @@ function Stats() {
   );
 }
 
+function StatItem({ icon: Icon, value, suffix, label }: { icon: React.ElementType; value: number; suffix: string; label: string }) {
+  const c = useCountUp(value);
+  return (
+    <div className="text-center">
+      <div className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-[image:var(--gradient-brand)] text-white">
+        <Icon className="h-5 w-5" />
+      </div>
+      <div className="mt-4 font-display text-5xl font-bold text-gradient-vc"><span ref={c.ref}>{c.value}</span>{suffix}</div>
+      <div className="mt-1 text-sm text-muted-foreground">{label}</div>
+    </div>
+  );
+}
+
 /* ───────────────────────── TESTIMONIALS ───────────────────────── */
 
 const REVIEWS = [
