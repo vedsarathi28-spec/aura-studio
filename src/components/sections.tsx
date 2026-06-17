@@ -463,82 +463,8 @@ function DemoGallery() {
   );
 }
 
-/* ───────────────────────── MARKETPLACE ───────────────────────── */
-
-const MARKET = [
-  { title: "Nimbus SaaS Kit", cat: "SaaS", price: 24999, features: ["Auth", "Dashboard", "Stripe"], status: "available" as const },
-  { title: "Ember Restaurant", cat: "Restaurant", price: 12999, features: ["Menu", "Reservations", "Gallery"], status: "available" as const },
-  { title: "Atlas Agency", cat: "Agency", price: 18999, features: ["CMS", "Case studies", "Blog"], status: "sold" as const },
-  { title: "Verve Portfolio", cat: "Portfolio", price: 7999, features: ["Animations", "CMS", "Dark mode"], status: "available" as const },
-  { title: "Bloom Boutique", cat: "E-commerce", price: 29999, features: ["Cart", "Checkout", "Inventory"], status: "available" as const },
-  { title: "Apex Fitness", cat: "Gym", price: 14999, features: ["Classes", "Trainers", "Memberships"], status: "sold" as const },
-];
-
-function Marketplace() {
-  return (
-    <section id="marketplace" className="relative py-28 sm:py-36">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
-          <div>
-            <SectionLabel>Marketplace</SectionLabel>
-            <h2 className="mt-6 font-display text-4xl sm:text-5xl font-bold max-w-2xl">
-              Ready-made websites, <span className="text-gradient">launched in 48 hours.</span>
-            </h2>
-          </div>
-          <p className="text-muted-foreground max-w-sm">Premium templates fully built, customised with your brand, deployed to your domain. One-time price, yours forever.</p>
-        </div>
-
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {MARKET.map((m, i) => (
-            <article key={m.title} className="group relative overflow-hidden rounded-3xl glass-strong flex flex-col">
-              <div className="relative aspect-[5/3] overflow-hidden" style={{ background: PROJECT_GRADIENTS[i % PROJECT_GRADIENTS.length] }}>
-                <div className="absolute inset-0 bg-noise opacity-20" />
-                <div className="absolute inset-4 rounded-xl bg-white/15 backdrop-blur-md border border-white/20 grid place-items-center">
-                  <span className="font-display text-2xl text-white font-bold">{m.title}</span>
-                </div>
-                <span className={`absolute top-4 right-4 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${
-                  m.status === "available" ? "bg-emerald-400 text-black" : "bg-rose-500 text-white"
-                }`}>
-                  {m.status === "available" ? "Available" : "Sold"}
-                </span>
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground">{m.cat}</span>
-                  <span className="font-display text-2xl font-bold text-gradient-vc">₹{m.price.toLocaleString("en-IN")}</span>
-                </div>
-                <h3 className="mt-2 font-display text-xl font-bold">{m.title}</h3>
-                <ul className="mt-4 space-y-1.5 text-sm text-muted-foreground">
-                  {m.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2"><Check className="h-3.5 w-3.5 text-primary" /> {f}</li>
-                  ))}
-                </ul>
-                <div className="mt-6 flex gap-2">
-                  <button
-                    disabled={m.status === "sold"}
-                    className="flex-1 rounded-full bg-[image:var(--gradient-brand)] text-white text-sm font-semibold py-2.5 disabled:opacity-40 disabled:cursor-not-allowed hover:shadow-glow transition-shadow"
-                  >
-                    Buy Now
-                  </button>
-                  <a
-                    href={`${WHATSAPP}?text=Hi%2C%20I'm%20interested%20in%20${encodeURIComponent(m.title)}`}
-                    target="_blank" rel="noreferrer"
-                    className="grid place-items-center h-10 w-10 rounded-full bg-[#25D366] text-white hover:scale-110 transition-transform"
-                    aria-label="Inquire on WhatsApp"
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ───────────────────────── PRICING ───────────────────────── */
+
 
 function Pricing() {
   const tiers = [
