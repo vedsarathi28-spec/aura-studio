@@ -9,7 +9,7 @@ const links = [
   { to: "/ai-agent", label: "AI Agent" },
   { to: "/work", label: "Work" },
   { to: "/demos", label: "Demos" },
-  { to: "/pricing", label: "Pricing" },
+  { to: "/pricing", label: "Website Price" },
   { to: "/contact", label: "Contact" },
 ] as const;
 

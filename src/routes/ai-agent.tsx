@@ -7,8 +7,14 @@ import {
   Workflow, Database, FileText, Bell, Languages, Lock, Star, Rocket,
   UtensilsCrossed, Hotel, Stethoscope, GraduationCap, Home, ShoppingCart,
   Dumbbell, Scissors, Scale, Factory, Car, Wrench as WrenchIcon, Package,
-  Landmark, Building2, MessageCircle
+  Landmark, Building2, MessageCircle, HelpCircle
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/ai-agent")({
   head: () => ({
@@ -204,6 +210,33 @@ const whyChoose = [
   "Dedicated support",
   "Affordable pricing",
   "Tailored for your business needs",
+];
+
+const faqItems = [
+  {
+    question: "How long does it take to set up an AI agent?",
+    answer: "Most AI agents are ready within 5-10 business days. The Basic package is fastest (3-5 days), while Enterprise solutions with custom integrations may take 2-3 weeks. I handle everything from design to deployment so you don't need technical expertise.",
+  },
+  {
+    question: "What training data do you need from my business?",
+    answer: "I train the AI on your business information — FAQs, product catalogs, service details, pricing, and any documents you provide. You can share website content, PDFs, spreadsheets, or even just answer a few questions. The more context you give, the smarter your AI agent becomes.",
+  },
+  {
+    question: "How does WhatsApp integration work?",
+    answer: "I connect your AI agent to WhatsApp Business API or WhatsApp Cloud API. Your customers can message your business number and get instant AI replies. It supports auto-replies, lead collection, appointment booking, and handoff to human agents when needed.",
+  },
+  {
+    question: "What happens after the free support period ends?",
+    answer: "After the included support period (7-90 days depending on your package), you can choose an affordable monthly maintenance plan or pay per update. Hosting for cloud AI agents is billed separately based on usage. I also offer training so your team can manage minor updates independently.",
+  },
+  {
+    question: "Can the AI agent handle multiple languages?",
+    answer: "Yes — the Standard package supports Hindi and English out of the box. The Professional and Enterprise packages support multiple Indian and international languages. The AI automatically detects the customer's language and responds accordingly.",
+  },
+  {
+    question: "Is my customer data secure?",
+    answer: "Absolutely. All AI agents use encrypted communication (HTTPS/SSL), secure cloud hosting, and access control. Enterprise clients get role-based access, audit logs, and compliance-ready data handling. I never share or sell your customer data.",
+  },
 ];
 
 /* ─── page ─── */
@@ -428,6 +461,41 @@ function AiAgentPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="relative py-20 sm:py-28">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <div className="text-center">
+              <SectionLabel>FAQ</SectionLabel>
+            </div>
+            <h2 className="mt-5 font-display text-3xl sm:text-4xl font-bold text-center">
+              Questions about <span className="text-gradient">AI agents.</span>
+            </h2>
+            <p className="mt-3 text-muted-foreground text-center max-w-lg mx-auto text-sm sm:text-base">
+              Everything you need to know before starting your AI project.
+            </p>
+
+            <div className="mt-10 sm:mt-14">
+              <Accordion type="single" collapsible className="w-full">
+                {faqItems.map((item, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="glass rounded-2xl mb-3 px-4 sm:px-6 border-0">
+                    <AccordionTrigger className="text-sm sm:text-base font-semibold hover:no-underline py-4 sm:py-5 gap-3">
+                      <span className="flex items-center gap-3 min-w-0">
+                        <span className="grid h-7 w-7 sm:h-8 sm:w-8 shrink-0 place-items-center rounded-full bg-secondary text-xs font-bold text-primary">
+                          {i + 1}
+                        </span>
+                        <span className="text-left">{item.question}</span>
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-sm sm:text-base leading-relaxed pl-10 sm:pl-11">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
