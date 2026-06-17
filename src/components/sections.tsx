@@ -1,55 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import {
-  ArrowRight, ArrowUpRight, Briefcase, Check, Code2, Globe, GraduationCap,
+  ArrowRight, ArrowUpRight, Briefcase, Check, Code2, Globe,
   Layout, Mail, MessageCircle, Palette, Phone, Rocket, Search, ShoppingBag,
   Sparkles, Star, Store, Trophy, Users, Wrench, Zap, Instagram, Linkedin, Github,
   Twitter, MapPin, ChevronDown, Eye,
 } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import profileImg from "@/assets/profile.jpg";
 import orbImg from "@/assets/hero-orb.jpg";
-import { SiteHeader } from "@/components/site-header";
-import { FloatingButtons } from "@/components/floating-buttons";
 import { useCountUp } from "@/hooks/use-reveal";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Aarav Mehta — Freelance Web Developer & Website Marketplace" },
-      { name: "description", content: "Premium freelance web developer. Custom websites, ready-made templates for sale, and end-to-end design from ₹10,000." },
-      { property: "og:title", content: "Aarav Mehta — Premium Web Developer" },
-      { property: "og:description", content: "Modern websites that grow businesses. Browse my portfolio and marketplace." },
-    ],
-  }),
-  component: HomePage,
-});
+export const WHATSAPP = "https://wa.me/919999999999";
+export const INSTAGRAM = "https://instagram.com/aarav.codes";
+export const EMAIL = "hello@aarav.dev";
 
-const WHATSAPP = "https://wa.me/919999999999";
-const INSTAGRAM = "https://instagram.com/aarav.codes";
-const EMAIL = "hello@aarav.dev";
-
-function HomePage() {
-  return (
-    <div id="top" className="relative min-h-screen overflow-hidden">
-      <SiteHeader />
-      <Hero />
-      <Marquee />
-      <About />
-      <Services />
-      <Projects />
-      <DemoGallery />
-      <Marketplace />
-      <Pricing />
-      <Process />
-      <Stats />
-      <Testimonials />
-      <FAQ />
-      <Contact />
-      <Footer />
-      <FloatingButtons />
-    </div>
-  );
-}
 
 /* ───────────────────────── HERO ───────────────────────── */
 
