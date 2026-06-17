@@ -711,20 +711,11 @@ function Stats() {
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-96 w-[800px] rounded-full opacity-30 blur-3xl" style={{ background: "var(--gradient-brand)" }} />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((s) => {
-            const Icon = s.icon;
-            const c = useCountUp(s.value);
-            return (
-              <div key={s.label} className="text-center">
-                <div className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-[image:var(--gradient-brand)] text-white">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <div className="mt-4 font-display text-5xl font-bold text-gradient-vc"><span ref={c.ref}>{c.value}</span>{s.suffix}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
-              </div>
-            );
-          })}
+          {stats.map((s) => (
+            <StatItem key={s.label} icon={s.icon} value={s.value} suffix={s.suffix} label={s.label} />
+          ))}
         </div>
+
       </div>
     </section>
   );
