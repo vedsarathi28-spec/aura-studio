@@ -17,7 +17,7 @@ export const EMAIL = "hello@aarav.dev";
 
 /* ───────────────────────── HERO ───────────────────────── */
 
-function Hero() {
+export function Hero() {
   return (
     <section className="relative isolate pt-36 pb-24 sm:pt-44 sm:pb-32">
       {/* background */}
@@ -134,7 +134,7 @@ function FloatChip({ icon, text, className = "", delay = "0s" }: { icon: React.R
 
 /* ───────────────────────── MARQUEE ───────────────────────── */
 
-function Marquee() {
+export function Marquee() {
   const tech = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Supabase", "Framer Motion", "Stripe", "Figma", "GSAP", "PostgreSQL", "Vercel"];
   const row = [...tech, ...tech];
   return (
@@ -152,7 +152,7 @@ function Marquee() {
 
 /* ───────────────────────── ABOUT ───────────────────────── */
 
-function About() {
+export function About() {
   const skills = [
     { label: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind", "GSAP"] },
     { label: "Backend", items: ["Node.js", "Supabase", "PostgreSQL", "REST APIs"] },
@@ -222,7 +222,7 @@ function MiniStat({ icon, value, suffix, label }: { icon: React.ReactNode; value
 
 /* ───────────────────────── SERVICES ───────────────────────── */
 
-function Services() {
+export function Services() {
   const services = [
     { icon: Store, title: "Business Websites", desc: "Premium presence for local brands & service businesses. Booking, leads, SEO out of the box.", tag: "from ₹15k" },
     { icon: Layout, title: "Portfolio Websites", desc: "Editorial layouts for creators, photographers, designers. Built to make people stop scrolling.", tag: "from ₹10k" },
@@ -286,7 +286,7 @@ const PROJECT_GRADIENTS = [
   "linear-gradient(135deg,#e11d48,#7c3aed,#06b6d4)",
 ];
 
-function Projects() {
+export function Projects() {
   const projects = [
     { title: "Luxe Lifestyle Co.", cat: "E-commerce", tech: ["Next.js", "Shopify", "GSAP"], featured: true },
     { title: "Orbit Studio", cat: "Agency", tech: ["React", "Framer", "Sanity"] },
@@ -381,7 +381,7 @@ const DEMOS = [
 ];
 const CATEGORIES = ["All", "Business", "Portfolio", "Restaurant", "Gym", "Agency", "School", "E-commerce"];
 
-function DemoGallery() {
+export function DemoGallery() {
   const [q, setQ] = useState("");
   const [cat, setCat] = useState("All");
   const filtered = useMemo(
@@ -466,7 +466,7 @@ function DemoGallery() {
 /* ───────────────────────── PRICING ───────────────────────── */
 
 
-function Pricing() {
+export function Pricing() {
   const tiers = [
     {
       name: "Small", price: "10,000", tagline: "Perfect for personal brands & local services",
@@ -542,7 +542,7 @@ function Pricing() {
 
 /* ───────────────────────── PROCESS ───────────────────────── */
 
-function Process() {
+export function Process() {
   const steps = [
     { icon: MessageCircle, title: "Discussion", desc: "30-min call. We define scope, goals, references and timeline." },
     { icon: Palette, title: "Design", desc: "High-fidelity Figma mockups, revised until pixel-perfect." },
@@ -588,7 +588,7 @@ function Process() {
 
 /* ───────────────────────── STATS ───────────────────────── */
 
-function Stats() {
+export function Stats() {
   const stats = [
     { icon: Globe, value: 120, suffix: "+", label: "Websites created" },
     { icon: ShoppingBag, value: 40, suffix: "+", label: "Websites sold" },
@@ -633,7 +633,7 @@ const REVIEWS = [
   { name: "Daniel Cole", role: "Founder, Ledger", rating: 5, text: "Hired Aarav for an MVP. Got a production-ready dashboard. He thinks like a product person, not just a coder." },
 ];
 
-function Testimonials() {
+export function Testimonials() {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
     const t = setInterval(() => setIdx((v) => (v + 1) % REVIEWS.length), 5000);
@@ -696,7 +696,7 @@ const FAQS = [
   { q: "How do payments work?", a: "50% to kick off, 50% at launch. UPI, bank transfer, Stripe, or international wire — your call." },
 ];
 
-function FAQ() {
+export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="relative py-28 sm:py-36 bg-secondary/20">
@@ -733,7 +733,7 @@ function FAQ() {
 
 /* ───────────────────────── CONTACT ───────────────────────── */
 
-function Contact() {
+export function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <section id="contact" className="relative py-28 sm:py-36 overflow-hidden">
@@ -812,7 +812,7 @@ function ContactCard({ icon, title, sub, href, cta }: { icon: React.ReactNode; t
 
 /* ───────────────────────── FOOTER ───────────────────────── */
 
-function Footer() {
+export function Footer() {
   const [count, setCount] = useState(0);
   useEffect(() => {
     const stored = Number(localStorage.getItem("visits") || "0");
@@ -885,7 +885,7 @@ function FooterCol({ title, links }: { title: string; links: [string, string][] 
 
 /* ───────────────────────── SHARED ───────────────────────── */
 
-function SectionLabel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+export function SectionLabel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] ${className}`}>
       <span className="h-1.5 w-1.5 rounded-full bg-[image:var(--gradient-brand)]" />
