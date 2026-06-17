@@ -3,6 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
 import { Hero, Marquee, Stats, SectionLabel } from "@/components/sections";
 
+import { ldScripts } from "@/lib/seo";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -10,9 +12,14 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Modern websites that grow businesses. Custom builds, end-to-end design, deployed in days." },
       { property: "og:title", content: "Aarav Mehta — Premium Freelance Web Developer" },
       { property: "og:description", content: "Modern websites that grow businesses. Custom builds and design from ₹10,000." },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Aarav Mehta — Premium Freelance Web Developer" },
+      { name: "twitter:description", content: "Modern websites that grow businesses. Custom builds and design from ₹10,000." },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: ldScripts({ name: "Aarav Mehta — Premium Freelance Web Developer", description: "Modern websites that grow businesses. Custom builds, end-to-end design, deployed in days.", path: "/" }),
   }),
   component: HomePage,
 });
