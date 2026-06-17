@@ -595,7 +595,7 @@ function Pricing() {
   return (
     <section id="pricing" className="relative py-28 sm:py-36 bg-secondary/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <SectionLabel className="mx-auto text-center block">Pricing</SectionLabel>
+        <div className="text-center"><SectionLabel>Pricing</SectionLabel></div>
         <h2 className="mt-6 font-display text-4xl sm:text-5xl font-bold text-center max-w-3xl mx-auto">
           Transparent pricing. <span className="text-gradient">No surprise invoices.</span>
         </h2>
@@ -752,7 +752,7 @@ function Testimonials() {
   return (
     <section id="testimonials" className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <SectionLabel className="mx-auto text-center block">Testimonials</SectionLabel>
+        <div className="text-center"><SectionLabel>Testimonials</SectionLabel></div>
         <h2 className="mt-6 font-display text-4xl sm:text-5xl font-bold text-center">
           Words from <span className="text-gradient">people I've worked with.</span>
         </h2>
@@ -811,7 +811,7 @@ function FAQ() {
   return (
     <section id="faq" className="relative py-28 sm:py-36 bg-secondary/20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <SectionLabel className="mx-auto text-center block">FAQ</SectionLabel>
+        <div className="text-center"><SectionLabel>FAQ</SectionLabel></div>
         <h2 className="mt-6 font-display text-4xl sm:text-5xl font-bold text-center">
           Questions, <span className="text-gradient-vc">answered.</span>
         </h2>
