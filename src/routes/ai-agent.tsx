@@ -465,6 +465,41 @@ function AiAgentPage() {
           </div>
         </section>
 
+        {/* ── FAQ ── */}
+        <section className="relative py-20 sm:py-28">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <div className="text-center">
+              <SectionLabel>FAQ</SectionLabel>
+            </div>
+            <h2 className="mt-5 font-display text-3xl sm:text-4xl font-bold text-center">
+              Questions about <span className="text-gradient">AI agents.</span>
+            </h2>
+            <p className="mt-3 text-muted-foreground text-center max-w-lg mx-auto text-sm sm:text-base">
+              Everything you need to know before starting your AI project.
+            </p>
+
+            <div className="mt-10 sm:mt-14">
+              <Accordion type="single" collapsible className="w-full">
+                {faqItems.map((item, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="glass rounded-2xl mb-3 px-4 sm:px-6 border-0">
+                    <AccordionTrigger className="text-sm sm:text-base font-semibold hover:no-underline py-4 sm:py-5 gap-3">
+                      <span className="flex items-center gap-3 min-w-0">
+                        <span className="grid h-7 w-7 sm:h-8 sm:w-8 shrink-0 place-items-center rounded-full bg-secondary text-xs font-bold text-primary">
+                          {i + 1}
+                        </span>
+                        <span className="text-left">{item.question}</span>
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-sm sm:text-base leading-relaxed pl-10 sm:pl-11">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
         {/* ── CTA ── */}
         <section className="relative py-28 sm:py-36">
           <div className="absolute inset-0 -z-10 bg-grid" />
