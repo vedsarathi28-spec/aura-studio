@@ -848,14 +848,15 @@ export function Footer() {
           </div>
 
           <FooterCol title="Navigate" links={[
-            ["Work", "#work"], ["Services", "#services"], ["Marketplace", "#marketplace"], ["Pricing", "#pricing"], ["Contact", "#contact"],
+            ["Work", "/work"], ["Services", "/services"], ["About", "/about"], ["Pricing", "/pricing"], ["Contact", "/contact"],
           ]} />
           <FooterCol title="Services" links={[
-            ["Business sites", "#services"], ["Portfolios", "#services"], ["E-commerce", "#services"], ["Web apps", "#services"], ["Redesign", "#services"],
+            ["Business sites", "/services"], ["Portfolios", "/services"], ["E-commerce", "/services"], ["Web apps", "/services"], ["Redesign", "/services"],
           ]} />
           <FooterCol title="Resources" links={[
-            ["FAQ", "#faq"], ["Process", "#process"], ["Testimonials", "#testimonials"], ["Demos", "#demos"],
+            ["FAQ", "/faq"], ["Process", "/process"], ["Testimonials", "/testimonials"], ["Demos", "/demos"],
           ]} />
+
         </div>
 
         <div className="mt-12 pt-6 border-t border-border/60 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-muted-foreground">
