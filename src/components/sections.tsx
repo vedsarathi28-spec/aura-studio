@@ -51,13 +51,13 @@ export function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#work" className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-brand)] px-6 py-3.5 text-sm font-semibold text-white shadow-glow hover:scale-[1.03] transition-transform">
+              <Link to="/work" className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-brand)] px-6 py-3.5 text-sm font-semibold text-white shadow-glow hover:scale-[1.03] transition-transform">
                 View My Work <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#marketplace" className="inline-flex items-center gap-2 rounded-full glass-strong px-6 py-3.5 text-sm font-semibold hover:bg-secondary transition-colors">
+              <Link to="/pricing" className="inline-flex items-center gap-2 rounded-full glass-strong px-6 py-3.5 text-sm font-semibold hover:bg-secondary transition-colors">
                 Get a Website
               </a>
-              <a href="#contact" className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
                 Contact Me <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
@@ -103,7 +103,7 @@ export function Hero() {
         </div>
 
         <div className="mt-20 flex justify-center">
-          <a href="#about" className="text-xs uppercase tracking-[0.3em] text-muted-foreground flex flex-col items-center gap-2 hover:text-foreground transition-colors">
+          <Link to="/about" className="text-xs uppercase tracking-[0.3em] text-muted-foreground flex flex-col items-center gap-2 hover:text-foreground transition-colors">
             Scroll <ChevronDown className="h-4 w-4 animate-bounce" />
           </a>
         </div>
@@ -241,7 +241,7 @@ export function Services() {
               Everything you need to <span className="text-gradient-vc">go live</span> — handled end-to-end.
             </h2>
           </div>
-          <a href="#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground">
+          <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground">
             Discuss your project <ArrowRight className="h-4 w-4" />
           </a>
         </div>
@@ -523,7 +523,7 @@ export function Pricing() {
               </ul>
 
               <a
-                href="#contact"
+                to="/contact"
                 className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold transition-all ${
                   t.popular
                     ? "bg-[image:var(--gradient-brand)] text-white shadow-glow hover:scale-[1.02]"
@@ -825,7 +825,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
           <div>
-            <a href="#top" className="flex items-center gap-2 font-display text-xl font-bold">
+            <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-white">A</span>
               Aarav<span className="text-gradient-vc">.dev</span>
             </a>
