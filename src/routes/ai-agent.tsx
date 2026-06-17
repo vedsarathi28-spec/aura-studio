@@ -212,6 +212,33 @@ const whyChoose = [
   "Tailored for your business needs",
 ];
 
+const faqItems = [
+  {
+    question: "How long does it take to set up an AI agent?",
+    answer: "Most AI agents are ready within 5-10 business days. The Basic package is fastest (3-5 days), while Enterprise solutions with custom integrations may take 2-3 weeks. I handle everything from design to deployment so you don't need technical expertise.",
+  },
+  {
+    question: "What training data do you need from my business?",
+    answer: "I train the AI on your business information — FAQs, product catalogs, service details, pricing, and any documents you provide. You can share website content, PDFs, spreadsheets, or even just answer a few questions. The more context you give, the smarter your AI agent becomes.",
+  },
+  {
+    question: "How does WhatsApp integration work?",
+    answer: "I connect your AI agent to WhatsApp Business API or WhatsApp Cloud API. Your customers can message your business number and get instant AI replies. It supports auto-replies, lead collection, appointment booking, and handoff to human agents when needed.",
+  },
+  {
+    question: "What happens after the free support period ends?",
+    answer: "After the included support period (7-90 days depending on your package), you can choose an affordable monthly maintenance plan or pay per update. Hosting for cloud AI agents is billed separately based on usage. I also offer training so your team can manage minor updates independently.",
+  },
+  {
+    question: "Can the AI agent handle multiple languages?",
+    answer: "Yes — the Standard package supports Hindi and English out of the box. The Professional and Enterprise packages support multiple Indian and international languages. The AI automatically detects the customer's language and responds accordingly.",
+  },
+  {
+    question: "Is my customer data secure?",
+    answer: "Absolutely. All AI agents use encrypted communication (HTTPS/SSL), secure cloud hosting, and access control. Enterprise clients get role-based access, audit logs, and compliance-ready data handling. I never share or sell your customer data.",
+  },
+];
+
 /* ─── page ─── */
 
 function AiAgentPage() {
