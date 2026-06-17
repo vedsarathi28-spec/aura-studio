@@ -7,8 +7,14 @@ import {
   Workflow, Database, FileText, Bell, Languages, Lock, Star, Rocket,
   UtensilsCrossed, Hotel, Stethoscope, GraduationCap, Home, ShoppingCart,
   Dumbbell, Scissors, Scale, Factory, Car, Wrench as WrenchIcon, Package,
-  Landmark, Building2, MessageCircle
+  Landmark, Building2, MessageCircle, HelpCircle
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/ai-agent")({
   head: () => ({
