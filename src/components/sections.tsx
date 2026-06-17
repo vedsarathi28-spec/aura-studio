@@ -53,13 +53,13 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link to="/work" className="group inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-brand)] px-6 py-3.5 text-sm font-semibold text-white shadow-glow hover:scale-[1.03] transition-transform">
                 View My Work <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
               <Link to="/pricing" className="inline-flex items-center gap-2 rounded-full glass-strong px-6 py-3.5 text-sm font-semibold hover:bg-secondary transition-colors">
                 Get a Website
-              </a>
+              </Link>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
                 Contact Me <ArrowUpRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
@@ -105,7 +105,7 @@ export function Hero() {
         <div className="mt-20 flex justify-center">
           <Link to="/about" className="text-xs uppercase tracking-[0.3em] text-muted-foreground flex flex-col items-center gap-2 hover:text-foreground transition-colors">
             Scroll <ChevronDown className="h-4 w-4 animate-bounce" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -243,7 +243,7 @@ export function Services() {
           </div>
           <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground">
             Discuss your project <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -522,7 +522,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <a
+              <Link
                 to="/contact"
                 className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold transition-all ${
                   t.popular
@@ -531,7 +531,7 @@ export function Pricing() {
                 }`}
               >
                 Choose {t.name} <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -828,7 +828,7 @@ export function Footer() {
             <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-white">A</span>
               Aarav<span className="text-gradient-vc">.dev</span>
-            </a>
+            </Link>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">Freelance web developer building premium websites for modern brands. Available worldwide, based in Bengaluru.</p>
             <div className="mt-6 flex gap-2">
               {[
