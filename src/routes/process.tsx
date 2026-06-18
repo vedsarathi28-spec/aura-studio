@@ -6,18 +6,18 @@ import { ldScripts } from "@/lib/seo";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Process — Aarav Mehta" },
+      { title: "Process — Panchariya Labs" },
       { name: "description", content: "From idea to launch in five sharp steps: discussion, design, development, testing, launch." },
-      { property: "og:title", content: "Process — Aarav Mehta" },
+      { property: "og:title", content: "Process — Panchariya Labs" },
       { property: "og:description", content: "How every project moves from brief to live site." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/process" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Process — Aarav Mehta" },
+      { name: "twitter:title", content: "Process — Panchariya Labs" },
       { name: "twitter:description", content: "How every project moves from brief to live site." },
     ],
     links: [{ rel: "canonical", href: "/process" }],
-    scripts: ldScripts({ name: "Process — Aarav Mehta", description: "How every project moves from brief to live site.", path: "/process" }),
+    scripts: ldScripts({ name: "Process — Panchariya Labs", description: "How every project moves from brief to live site.", path: "/process" }),
   }),
   component: () => <PageShell><div className="pt-24"><Process /></div></PageShell>,
 });

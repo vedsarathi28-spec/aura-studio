@@ -19,19 +19,19 @@ import {
 export const Route = createFileRoute("/ai-agent")({
   head: () => ({
     meta: [
-      { title: "AI Agent Services — Aarav Mehta" },
+      { title: "AI Agent Services — Panchariya Labs" },
       { name: "description", content: "Custom AI chatbot solutions for businesses. WhatsApp AI, website chatbots, CRM integration & automation. Starting from ₹10,000." },
-      { property: "og:title", content: "AI Agent Services — Aarav Mehta" },
+      { property: "og:title", content: "AI Agent Services — Panchariya Labs" },
       { property: "og:description", content: "Custom AI chatbot solutions for businesses. WhatsApp AI, website chatbots, CRM integration & automation." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/ai-agent" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "AI Agent Services — Aarav Mehta" },
+      { name: "twitter:title", content: "AI Agent Services — Panchariya Labs" },
       { name: "twitter:description", content: "Custom AI chatbot solutions for businesses. WhatsApp AI, website chatbots, CRM integration & automation." },
     ],
     links: [{ rel: "canonical", href: "/ai-agent" }],
     scripts: ldScripts({
-      name: "AI Agent Services — Aarav Mehta",
+      name: "AI Agent Services — Panchariya Labs",
       description: "Custom AI chatbot solutions for businesses. WhatsApp AI, website chatbots, CRM integration & automation.",
       path: "/ai-agent",
     }),

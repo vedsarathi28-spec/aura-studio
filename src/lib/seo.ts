@@ -1,7 +1,7 @@
 export const ORG = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Aarav Mehta",
+  name: "Panchariya Labs",
   url: "/",
   description: "Premium freelance web developer crafting modern business websites, portfolios and e-commerce.",
   sameAs: [] as string[],
@@ -22,7 +22,7 @@ export function webPageLd({
     name,
     description,
     url: path,
-    isPartOf: { "@type": "WebSite", name: "Aarav Mehta", url: "/" },
+    isPartOf: { "@type": "WebSite", name: "Panchariya Labs", url: "/" },
     publisher: ORG,
   };
 }
