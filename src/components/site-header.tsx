@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { ThemeToggle } from "./theme-toggle";
+import logoIcon from "@/assets/panchariya-icon.png.asset.json";
 
 const links = [
   { to: "/about", label: "About" },
@@ -26,10 +27,8 @@ export function SiteHeader() {
     <header className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <nav className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all ${scrolled ? "glass-strong shadow-elegant" : ""}`}>
-          <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold">
-            <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-white">
-              <span className="font-mono text-sm">A</span>
-            </span>
+          <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold" aria-label="Panchariya Labs — Home">
+            <img src={logoIcon.url} alt="Panchariya Labs" width={36} height={36} className="h-9 w-9 object-contain" />
             <span className="hidden sm:inline">Panchariya<span className="text-gradient-vc">Labs</span></span>
           </Link>
 

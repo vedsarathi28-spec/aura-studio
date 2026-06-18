@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import logoIcon from "@/assets/panchariya-icon.png.asset.json";
+import ogImage from "@/assets/panchariya-og.jpg.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -65,12 +67,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: ogImage.url },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "675" },
+      { property: "og:site_name", content: "Panchariya Labs" },
+      { name: "twitter:image", content: ogImage.url },
+      { name: "twitter:title", content: "Panchariya Labs — Premium Freelance Web Developer" },
+      { name: "twitter:description", content: "Modern websites that grow businesses. Custom builds + ready-made websites for sale." },
+      { name: "apple-mobile-web-app-title", content: "Panchariya Labs" },
+      { name: "application-name", content: "Panchariya Labs" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" },
+      { rel: "icon", type: "image/png", href: logoIcon.url },
+      { rel: "apple-touch-icon", href: logoIcon.url },
       { rel: "canonical", href: "/" },
     ],
   }),

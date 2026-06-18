@@ -8,6 +8,7 @@ import {
 import { Link } from "@tanstack/react-router";
 import profileImg from "@/assets/profile.jpg";
 import orbImg from "@/assets/hero-orb.jpg";
+import logoIcon from "@/assets/panchariya-icon.png.asset.json";
 import { useCountUp } from "@/hooks/use-reveal";
 
 export const WHATSAPP = "https://wa.me/919999999999";
@@ -825,8 +826,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
           <div>
-            <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-white">A</span>
+            <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold" aria-label="Panchariya Labs — Home">
+              <img src={logoIcon.url} alt="Panchariya Labs" width={40} height={40} className="h-10 w-10 object-contain" />
               Panchariya<span className="text-gradient-vc">Labs</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">Freelance web developer building premium websites for modern brands. Available worldwide, based in Bengaluru.</p>
