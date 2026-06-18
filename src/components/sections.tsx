@@ -689,11 +689,12 @@ export function Testimonials() {
 /* ───────────────────────── FAQ ───────────────────────── */
 
 const FAQS = [
-  { q: "How long does a website take?", a: "A small site lands in 5–7 days, medium in 2–3 weeks, large in 4–6 weeks." },
-  { q: "Do you provide hosting?", a: "I deploy to your Vercel / Netlify / Hostinger account and configure the domain. Hosting is billed directly to you — most clients spend ₹0–₹500/month." },
-  { q: "Can I update the website later?", a: "Yes — I add a simple CMS for content edits, and offer maintenance retainers if you'd rather hand it off." },
+  { q: "How long does a website take?", a: "A small website takes 2–3 days, a medium website takes 5–7 days, and a large website takes 2–3 weeks." },
+  { q: "Do you provide hosting?", a: "Yes — if you don't have your own hosting, we provide it for ₹3,000 per year. We deploy to your Vercel / Netlify / Hostinger account and configure the domain." },
+  { q: "What about maintenance?", a: "We offer ongoing maintenance at ₹1,000 per month, which includes updates, security patches, and content tweaks." },
+  { q: "Do you offer SEO services?", a: "Yes — we charge ₹5,000 per month for SEO, which includes keyword research, on-page optimization, and monthly performance reports." },
+  { q: "Can I update the website later?", a: "Yes — we add a simple CMS for content edits, and offer maintenance retainers if you'd rather hand it off." },
   { q: "Do you provide support?", a: "Every project includes 14 days of free post-launch support. Extended support packages start at ₹2,000/month." },
-  { q: "What about SEO and analytics?", a: "Every site ships with semantic markup, OpenGraph tags, sitemap, robots, and Google Analytics / Search Console wired up." },
   { q: "How do payments work?", a: "50% to kick off, 50% at launch. UPI, bank transfer, Stripe, or international wire — your call." },
 ];
 
