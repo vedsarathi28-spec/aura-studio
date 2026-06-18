@@ -627,10 +627,10 @@ function StatItem({ icon: Icon, value, suffix, label }: { icon: React.ElementTyp
 /* ───────────────────────── TESTIMONIALS ───────────────────────── */
 
 const REVIEWS = [
-  { name: "Priya Sharma", role: "Founder, Luxe Lifestyle", rating: 5, text: "Aarav delivered our store two weeks ahead of schedule and revenue jumped 38% in the first month. He's a unicorn." },
+  { name: "Priya Sharma", role: "Founder, Luxe Lifestyle", rating: 5, text: "Panchariya Labs delivered our store two weeks ahead of schedule and revenue jumped 38% in the first month. They're a unicorn." },
   { name: "Rohan Iyer", role: "CEO, Orbit Studio", rating: 5, text: "Communication on point, design instincts world-class. Easily the smoothest web project I've ever run." },
-  { name: "Aisha Khan", role: "Marketing Lead, Northpeak", rating: 5, text: "Our old site looked stuck in 2015. Aarav rebuilt it in three weeks and our lead form fills tripled." },
-  { name: "Daniel Cole", role: "Founder, Ledger", rating: 5, text: "Hired Aarav for an MVP. Got a production-ready dashboard. He thinks like a product person, not just a coder." },
+  { name: "Aisha Khan", role: "Marketing Lead, Northpeak", rating: 5, text: "Our old site looked stuck in 2015. Panchariya Labs rebuilt it in three weeks and our lead form fills tripled." },
+  { name: "Daniel Cole", role: "Founder, Ledger", rating: 5, text: "Hired Panchariya Labs for an MVP. Got a production-ready dashboard. They think like product people, not just coders." },
 ];
 
 export function Testimonials() {
@@ -827,7 +827,7 @@ export function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-white">A</span>
-              Aarav<span className="text-gradient-vc">.dev</span>
+              Panchariya<span className="text-gradient-vc">Labs</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">Freelance web developer building premium websites for modern brands. Available worldwide, based in Bengaluru.</p>
             <div className="mt-6 flex gap-2">
@@ -860,7 +860,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border/60 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Aarav Mehta. Crafted with obsession.</div>
+          <div>© {new Date().getFullYear()} Panchariya Labs. Crafted with obsession.</div>
           <div className="flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             {count.toLocaleString("en-IN")} visitors
