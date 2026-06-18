@@ -30,7 +30,7 @@ export function SiteHeader() {
             <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-white">
               <span className="font-mono text-sm">A</span>
             </span>
-            <span className="hidden sm:inline">Aarav<span className="text-gradient-vc">.dev</span></span>
+            <span className="hidden sm:inline">Panchariya<span className="text-gradient-vc">Labs</span></span>
           </Link>
 
           <ul className="hidden md:flex items-center gap-1">

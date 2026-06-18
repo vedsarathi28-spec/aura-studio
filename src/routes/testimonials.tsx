@@ -7,7 +7,7 @@ export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
       { title: "Testimonials — Aarav Mehta" },
-      { name: "description", content: "Reviews from founders, agencies and marketing leads who've worked with Aarav." },
+      { name: "description", content: "Reviews from founders, agencies and marketing leads who've worked with Panchariya Labs." },
       { property: "og:title", content: "Testimonials — Aarav Mehta" },
       { property: "og:description", content: "What clients say after launch." },
       { property: "og:type", content: "website" },
