@@ -47,7 +47,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-              I'm Aarav — a freelance web developer crafting premium digital experiences for startups, creators and local brands. Custom builds, end-to-end design, deployed in days.
+              Panchariya Labs — crafting premium digital experiences for startups, creators and local brands. Custom builds, end-to-end design, deployed in days.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -76,7 +76,7 @@ export function Hero() {
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] glass-strong p-2">
                 <img
                   src={profileImg}
-                  alt="Aarav Mehta — freelance web developer"
+                  alt="Panchariya Labs — web development agency"
                   width={768}
                   height={960}
                   className="h-full w-full rounded-[1.5rem] object-cover"
@@ -166,7 +166,7 @@ export function About() {
         <div className="mt-6 grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-start">
           <div className="lg:sticky lg:top-32">
             <div className="relative aspect-square overflow-hidden rounded-3xl glass-strong p-2">
-              <img src={profileImg} alt="Aarav portrait" loading="lazy" width={768} height={768} className="h-full w-full rounded-[1.3rem] object-cover" />
+              <img src={profileImg} alt="Panchariya Labs" loading="lazy" width={768} height={768} className="h-full w-full rounded-[1.3rem] object-cover" />
             </div>
             <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" /> Based in Bengaluru · Working worldwide
