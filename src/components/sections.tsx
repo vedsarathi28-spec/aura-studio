@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight, ArrowUpRight, Briefcase, Check, Code2, Globe,
-  Layout, Mail, MessageCircle, Palette, Phone, Rocket, Search, ShoppingBag,
+  Layout, Mail, MessageCircle, Palette, Phone, Rocket, ShoppingBag,
   Sparkles, Star, Store, Trophy, Users, Wrench, Zap, Instagram, Linkedin, Github,
-  Twitter, MapPin, ChevronDown, Eye,
+  Twitter, MapPin, ChevronDown,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import profileImg from "@/assets/profile.jpg";
