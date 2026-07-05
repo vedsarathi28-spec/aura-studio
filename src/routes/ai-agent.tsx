@@ -276,68 +276,100 @@ function AiAgentPage() {
         </section>
 
         {/* ── Pricing ── */}
-        <section id="pricing" className="relative py-28 sm:py-36 bg-secondary/20">
+        <section id="pricing" className="relative py-24 sm:py-32 bg-secondary/30">
+          <div className="absolute inset-0 -z-10 bg-grid opacity-40" />
+          <div className="absolute inset-0 -z-10 bg-noise pointer-events-none" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="text-center">
+            <div className="text-center max-w-3xl mx-auto">
               <SectionLabel>Pricing</SectionLabel>
+              <h2 className="mt-6 font-display text-4xl sm:text-5xl font-bold tracking-tight">
+                Transparent AI packages. <span className="text-gradient">Pick what fits.</span>
+              </h2>
+              <p className="mt-4 text-muted-foreground">One-time build fee. Support included. No recurring AI fees unless you choose cloud hosting.</p>
             </div>
-            <h2 className="mt-6 font-display text-4xl sm:text-5xl font-bold text-center max-w-3xl mx-auto">
-              Transparent AI packages. <span className="text-gradient">Pick what fits.</span>
-            </h2>
-            <p className="mt-4 text-muted-foreground text-center max-w-xl mx-auto">One-time build fee. Support included. No recurring AI fees unless you choose cloud hosting.</p>
 
-            <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
-              {pricingTiers.map((tier) => (
-                <div
-                  key={tier.name}
-                  className={`relative rounded-3xl p-7 flex flex-col glass glow-border hover:-translate-y-1 transition-all duration-500 ${tier.popular ? "border-2 border-transparent lg:-mt-4 lg:mb-4" : ""}`}
-                  style={tier.popular ? { backgroundImage: "linear-gradient(var(--card),var(--card)),var(--gradient-brand)", backgroundOrigin: "border-box", backgroundClip: "padding-box,border-box" } : undefined}
-                >
-                  {tier.popular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[image:var(--gradient-brand)] px-4 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-glow">
-                      Most Popular
-                    </span>
-                  )}
-
-                  <div className="flex items-center gap-3">
-                    <div className={`grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br ${tier.color} text-white`}>
-                      <Bot className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <div className="font-display text-lg font-bold">{tier.name}</div>
-                      <div className="text-xs text-muted-foreground">{tier.subtitle}</div>
-                    </div>
-                  </div>
-
-                  <p className="mt-4 text-sm text-muted-foreground">{tier.desc}</p>
-
-                  {tier.includes && (
-                    <div className="mt-4 text-xs font-semibold text-primary">{tier.includes}</div>
-                  )}
-
-                  <ul className="mt-4 space-y-2.5 flex-1">
-                    {tier.features.map((f, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm">
-                        <span className="mt-0.5 grid h-4.5 w-4.5 place-items-center rounded-full bg-secondary shrink-0">
-                          <Check className="h-2.5 w-2.5" />
-                        </span>
-                        <span className="text-muted-foreground">{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    to="/contact"
-                    className={`mt-6 inline-flex items-center justify-center gap-2 rounded-full py-3 text-sm font-semibold transition-all ${
-                      tier.popular
-                        ? "bg-[image:var(--gradient-brand)] text-white shadow-glow hover:scale-[1.02]"
-                        : "glass-strong hover:bg-secondary"
+            <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+              {pricingTiers.map((tier) => {
+                const isPopular = tier.popular;
+                return (
+                  <div
+                    key={tier.name}
+                    className={`relative flex flex-col rounded-3xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 ${
+                      isPopular ? "z-10" : ""
                     }`}
+                    style={
+                      isPopular
+                        ? {
+                            background: "linear-gradient(var(--card), var(--card)) padding-box, var(--gradient-cta) border-box",
+                            border: "2px solid transparent",
+                            boxShadow: "var(--shadow-glow-cta)",
+                          }
+                        : {
+                            background: "color-mix(in oklab, var(--card) 60%, transparent)",
+                            border: "1px solid var(--border)",
+                          }
+                    }
                   >
-                    Choose {tier.name.split(" ")[0]} <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              ))}
+                    {isPopular && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span
+                          className="inline-block rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-primary-foreground shadow-glow sm:px-4 sm:tracking-wider"
+                          style={{ background: "var(--gradient-cta)" }}
+                        >
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="mb-5">
+                      <div className="flex items-center gap-3">
+                        <div className={`grid h-9 w-9 place-items-center rounded-xl shrink-0 ${isPopular ? "text-primary-foreground" : "text-foreground"}`} style={isPopular ? { background: "var(--gradient-cta)" } : { background: "var(--secondary)" }}>
+                          <Bot className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <h3 className="font-display text-lg font-bold leading-tight">{tier.name}</h3>
+                          <p className="text-xs text-muted-foreground">{tier.subtitle}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mb-5">
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-display text-3xl font-bold tracking-tight">₹{tier.price}</span>
+                        <span className="text-sm text-muted-foreground">onwards</span>
+                      </div>
+                      <p className="mt-1 text-sm text-muted-foreground">{tier.desc}</p>
+                    </div>
+
+                    {tier.includes && (
+                      <div className="mb-4 text-xs font-semibold text-primary">{tier.includes}</div>
+                    )}
+
+                    <ul className="space-y-2.5 flex-1">
+                      {tier.features.map((f, i) => (
+                        <li key={i} className="flex items-start gap-2.5 text-sm">
+                          <span className="mt-0.5 grid h-4 w-4 place-items-center rounded-full bg-primary/10 shrink-0">
+                            <Check className="h-2.5 w-2.5 text-primary" />
+                          </span>
+                          <span className="text-muted-foreground leading-snug">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link
+                      to="/contact"
+                      className={`mt-6 inline-flex items-center justify-center gap-2 rounded-full py-3 px-5 text-sm font-semibold transition-all ${
+                        isPopular
+                          ? "text-primary-foreground hover:scale-[1.02] hover:shadow-glow"
+                          : "border border-border bg-card/50 text-foreground hover:bg-secondary"
+                      }`}
+                      style={isPopular ? { background: "var(--gradient-cta)" } : undefined}
+                    >
+                      Choose {tier.name.split(" ")[0]} <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
