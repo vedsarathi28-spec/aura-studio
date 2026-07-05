@@ -69,10 +69,11 @@
   --success: oklch(0.75 0.18 155);
 
   --gradient-brand: linear-gradient(135deg, oklch(0.7 0.25 305) 0%, oklch(0.65 0.26 340) 50%, oklch(0.78 0.16 200) 100%);
+  --gradient-cta: linear-gradient(90deg, oklch(0.72 0.25 350) 0%, oklch(0.65 0.25 305) 50%, oklch(0.55 0.22 260) 100%);
   --gradient-violet-cyan: linear-gradient(135deg, oklch(0.65 0.25 305), oklch(0.78 0.16 200));
   --gradient-soft: linear-gradient(180deg, oklch(0.21 0.025 280 / 0.7), oklch(0.16 0.02 280 / 0.4));
   --shadow-glow: 0 0 60px -10px oklch(0.65 0.25 305 / 0.5);
-  --shadow-glow-cyan: 0 0 60px -10px oklch(0.78 0.16 200 / 0.5);
+  --shadow-glow-cta: 0 0 40px -5px oklch(0.72 0.25 350 / 0.4);
   --shadow-elegant: 0 25px 80px -20px oklch(0 0 0 / 0.5);
 
   --noise: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/></svg>");
