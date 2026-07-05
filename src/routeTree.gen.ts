@@ -16,7 +16,6 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as FaqRouteImport } from './routes/faq'
-import { Route as DemosRouteImport } from './routes/demos'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AiAgentRouteImport } from './routes/ai-agent'
 import { Route as AboutRouteImport } from './routes/about'
@@ -57,11 +56,6 @@ const FaqRoute = FaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DemosRoute = DemosRouteImport.update({
-  id: '/demos',
-  path: '/demos',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -88,7 +82,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/ai-agent': typeof AiAgentRoute
   '/contact': typeof ContactRoute
-  '/demos': typeof DemosRoute
   '/faq': typeof FaqRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
@@ -102,7 +95,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/ai-agent': typeof AiAgentRoute
   '/contact': typeof ContactRoute
-  '/demos': typeof DemosRoute
   '/faq': typeof FaqRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
@@ -117,7 +109,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/ai-agent': typeof AiAgentRoute
   '/contact': typeof ContactRoute
-  '/demos': typeof DemosRoute
   '/faq': typeof FaqRoute
   '/pricing': typeof PricingRoute
   '/process': typeof ProcessRoute
@@ -133,7 +124,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/ai-agent'
     | '/contact'
-    | '/demos'
     | '/faq'
     | '/pricing'
     | '/process'
@@ -147,7 +137,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/ai-agent'
     | '/contact'
-    | '/demos'
     | '/faq'
     | '/pricing'
     | '/process'
@@ -161,7 +150,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/ai-agent'
     | '/contact'
-    | '/demos'
     | '/faq'
     | '/pricing'
     | '/process'
@@ -176,7 +164,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AiAgentRoute: typeof AiAgentRoute
   ContactRoute: typeof ContactRoute
-  DemosRoute: typeof DemosRoute
   FaqRoute: typeof FaqRoute
   PricingRoute: typeof PricingRoute
   ProcessRoute: typeof ProcessRoute
@@ -237,13 +224,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/demos': {
-      id: '/demos'
-      path: '/demos'
-      fullPath: '/demos'
-      preLoaderRoute: typeof DemosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -280,7 +260,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AiAgentRoute: AiAgentRoute,
   ContactRoute: ContactRoute,
-  DemosRoute: DemosRoute,
   FaqRoute: FaqRoute,
   PricingRoute: PricingRoute,
   ProcessRoute: ProcessRoute,
@@ -292,3 +271,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
