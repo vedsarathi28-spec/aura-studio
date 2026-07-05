@@ -313,7 +313,7 @@ function AiAgentPage() {
                     {isPopular && (
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                         <span
-                          className="inline-block rounded-full px-4 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground shadow-glow"
+                          className="inline-block rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-primary-foreground shadow-glow sm:px-4 sm:tracking-wider"
                           style={{ background: "var(--gradient-cta)" }}
                         >
                           Most Popular
