@@ -856,7 +856,7 @@ export function Footer() {
             ["Business sites", "/services"], ["Portfolios", "/services"], ["E-commerce", "/services"], ["Web apps", "/services"], ["Redesign", "/services"],
           ]} />
           <FooterCol title="Resources" links={[
-            ["FAQ", "/faq"], ["Process", "/process"], ["Testimonials", "/testimonials"], ["Demos", "/demos"],
+            ["FAQ", "/faq"], ["Process", "/process"], ["Testimonials", "/testimonials"],
           ]} />
 
         </div>

@@ -42,7 +42,6 @@ function HomePage() {
               ["About", "/about", "Who I am, my skills, and how I work."],
               ["Services", "/services", "Everything I build, end-to-end."],
               ["Work", "/work", "Featured client projects."],
-              ["Demos", "/demos", "Live template gallery."],
               ["Pricing", "/pricing", "Transparent packages from ₹10k."],
               ["Contact", "/contact", "Let's start the conversation."],
             ].map(([label, to, desc]) => (
