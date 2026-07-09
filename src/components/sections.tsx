@@ -688,10 +688,10 @@ export function Contact() {
           </form>
 
           <div className="space-y-4">
-            <ContactCard icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp" sub="Fastest response · IST 9 AM – 9 PM" href={WHATSAPP} cta="Open chat" />
-            <ContactCard icon={<Mail className="h-5 w-5" />} title="Email" sub={EMAIL} href={`mailto:${EMAIL}`} cta="Send email" />
-            <ContactCard icon={<Instagram className="h-5 w-5" />} title="Instagram" sub="Behind the scenes & process" href={INSTAGRAM} cta="Follow" />
-            <ContactCard icon={<Phone className="h-5 w-5" />} title="Call" sub="+91 99999 99999" href="tel:+919999999999" cta="Dial" />
+            <ContactCard icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp" sub={`${PHONE_DISPLAY} · fastest reply`} href={WHATSAPP} cta="Open chat" />
+            <ContactCard icon={<Mail className="h-5 w-5" />} title="Email (prefer not to WhatsApp?)" sub={EMAIL} href={`mailto:${EMAIL}`} cta="Send email" />
+            <ContactCard icon={<Instagram className="h-5 w-5" />} title="Instagram" sub="@workwithpp · behind the scenes" href={INSTAGRAM} cta="Follow" />
+            <ContactCard icon={<Phone className="h-5 w-5" />} title="Call" sub={PHONE_DISPLAY} href={`tel:${PHONE_TEL}`} cta="Dial" />
           </div>
         </div>
       </div>
