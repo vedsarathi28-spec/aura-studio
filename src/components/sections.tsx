@@ -755,7 +755,7 @@ export function Footer() {
               ].map((s, i) => {
                 const Icon = s.icon;
                 return (
-                  <a key={i} href={s.href} target="_blank" rel="noreferrer" className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-[image:var(--gradient-brand)] hover:text-white transition-colors">
+                  <a key={i} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label} className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-[image:var(--gradient-brand)] hover:text-white transition-colors">
                     <Icon className="h-4 w-4" />
                   </a>
                 );
