@@ -19,5 +19,5 @@ export const Route = createFileRoute("/work")({
     links: [{ rel: "canonical", href: "/work" }],
     scripts: ldScripts({ name: "Work — Panchariya Labs", description: "Featured client projects and what they shipped with.", path: "/work" }),
   }),
-  component: () => <PageShell><div className="pt-24"><Projects /><Testimonials /></div></PageShell>,
+  component: () => <PageShell><div className="pt-24"><Projects /><Stats /><Testimonials /></div></PageShell>,
 });
