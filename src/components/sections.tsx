@@ -392,8 +392,8 @@ export function Pricing() {
       features: ["Everything in Small", "Up to 10 pages", "Photo / video gallery", "Blog with CMS", "Google Analytics", "Visitor counter", "Advanced SEO"],
     },
     {
-      name: "Large", price: "40,000", tagline: "Full digital products & web platforms",
-      features: ["Everything in Medium", "Up to 20 pages", "Admin dashboard", "Database integration", "User authentication", "Custom features", "Premium UI/UX"],
+      name: "Large", price: "65,000", tagline: "Full digital products & web platforms",
+      features: ["Everything in Medium", "Custom web app build", "User authentication", "Admin dashboard", "Database design & integration", "1 round of post-launch revisions", "Premium UI/UX"],
     },
   ];
 
