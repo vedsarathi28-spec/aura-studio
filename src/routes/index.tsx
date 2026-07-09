@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
-import { Hero, Marquee, Stats, SectionLabel } from "@/components/sections";
+import { Hero, Marquee, SectionLabel } from "@/components/sections";
 
 import { ldScripts } from "@/lib/seo";
 
