@@ -11,9 +11,16 @@ import orbImg from "@/assets/hero-orb.jpg";
 import logoIcon from "@/assets/panchariya-icon.png.asset.json";
 import { useCountUp } from "@/hooks/use-reveal";
 
-export const WHATSAPP = "https://wa.me/919999999999";
-export const INSTAGRAM = "https://instagram.com/aarav.codes";
-export const EMAIL = "hello@aarav.dev";
+// ─── Quick-edit contact + status constants ───
+export const AVAILABILITY = "Available for new projects · 2 slots open this month";
+export const PHONE_DISPLAY = "+91 77424 84927";
+export const PHONE_TEL = "+917742484927";
+export const WHATSAPP = "https://wa.me/917742484927?text=Hi%20Panchariya%20Labs%2C%20I%27d%20like%20to%20discuss%20a%20website%20project.";
+export const EMAIL = "workwithpp46@gmail.com";
+export const INSTAGRAM = "https://instagram.com/workwithpp";
+export const LINKEDIN = "https://www.linkedin.com/in/codewithpp";
+export const GITHUB = "https://github.com/CodeWithPiyush41";
+export const TWITTER = "https://x.com/workwithpp_";
 
 
 /* ───────────────────────── HERO ───────────────────────── */
@@ -40,7 +47,7 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
-              Available for new projects · Booking Q1
+              {AVAILABILITY}
             </span>
 
             <h1 className="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.02] tracking-tight">
@@ -63,10 +70,14 @@ export function Hero() {
               </Link>
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
-              <HeroStat value={120} suffix="+" label="Websites built" />
-              <HeroStat value={85} suffix="+" label="Happy clients" />
-              <HeroStat value={6} suffix="yr" label="Experience" />
+            <div className="mt-12 max-w-lg rounded-2xl glass p-5 flex flex-col sm:flex-row sm:items-center gap-4 glow-border">
+              <div className="flex-1">
+                <p className="text-sm font-semibold">Currently building my client portfolio</p>
+                <p className="mt-1 text-xs text-muted-foreground">Fresh case studies dropping soon — see the recent work below.</p>
+              </div>
+              <Link to="/work" className="inline-flex items-center gap-1.5 rounded-full glass-strong px-4 py-2 text-xs font-semibold hover:bg-secondary transition-colors shrink-0">
+                See recent work <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
 
@@ -88,8 +99,11 @@ export function Hero() {
                       <Sparkles className="h-4 w-4" />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-sm font-semibold truncate">Currently shipping</p>
-                      <p className="text-xs text-muted-foreground truncate">Luxe Lifestyle Co. — E-commerce</p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-sm font-semibold truncate">Luxe Lifestyle Co.</p>
+                        <span className="rounded-full bg-primary/15 text-primary px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider shrink-0">Concept</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground truncate">Concept e-commerce build</p>
                     </div>
                   </div>
                 </div>
@@ -378,8 +392,8 @@ export function Pricing() {
       features: ["Everything in Small", "Up to 10 pages", "Photo / video gallery", "Blog with CMS", "Google Analytics", "Visitor counter", "Advanced SEO"],
     },
     {
-      name: "Large", price: "40,000", tagline: "Full digital products & web platforms",
-      features: ["Everything in Medium", "Up to 20 pages", "Admin dashboard", "Database integration", "User authentication", "Custom features", "Premium UI/UX"],
+      name: "Large", price: "65,000", tagline: "Full digital products & web platforms",
+      features: ["Everything in Medium", "Custom web app build", "User authentication", "Admin dashboard", "Database design & integration", "1 round of post-launch revisions", "Premium UI/UX"],
     },
   ];
 
@@ -591,7 +605,7 @@ export function Testimonials() {
 const FAQS = [
   { q: "How long does a website take?", a: "A small website takes 2–3 days, a medium website takes 5–7 days, and a large website takes 2–3 weeks." },
   { q: "Do you provide hosting?", a: "Yes — if you don't have your own hosting, we provide it for ₹3,000 per year. We deploy to your Vercel / Netlify / Hostinger account and configure the domain." },
-  { q: "What about maintenance?", a: "We offer ongoing maintenance at ₹1,000 per month, which includes updates, security patches, and content tweaks." },
+  { q: "What about maintenance?", a: "Our maintenance retainer is ₹3,000/month and includes uptime monitoring, monthly content updates, basic SEO maintenance, and priority bug fixes." },
   { q: "Do you offer SEO services?", a: "Yes — we charge ₹5,000 per month for SEO, which includes keyword research, on-page optimization, and monthly performance reports." },
   { q: "Can I update the website later?", a: "Yes — we add a simple CMS for content edits, and offer maintenance retainers if you'd rather hand it off." },
   { q: "Do you provide support?", a: "Every project includes 14 days of free post-launch support. Extended support packages start at ₹2,000/month." },
@@ -674,10 +688,10 @@ export function Contact() {
           </form>
 
           <div className="space-y-4">
-            <ContactCard icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp" sub="Fastest response · IST 9 AM – 9 PM" href={WHATSAPP} cta="Open chat" />
-            <ContactCard icon={<Mail className="h-5 w-5" />} title="Email" sub={EMAIL} href={`mailto:${EMAIL}`} cta="Send email" />
-            <ContactCard icon={<Instagram className="h-5 w-5" />} title="Instagram" sub="Behind the scenes & process" href={INSTAGRAM} cta="Follow" />
-            <ContactCard icon={<Phone className="h-5 w-5" />} title="Call" sub="+91 99999 99999" href="tel:+919999999999" cta="Dial" />
+            <ContactCard icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp" sub={`${PHONE_DISPLAY} · fastest reply`} href={WHATSAPP} cta="Open chat" />
+            <ContactCard icon={<Mail className="h-5 w-5" />} title="Email (prefer not to WhatsApp?)" sub={EMAIL} href={`mailto:${EMAIL}`} cta="Send email" />
+            <ContactCard icon={<Instagram className="h-5 w-5" />} title="Instagram" sub="@workwithpp · behind the scenes" href={INSTAGRAM} cta="Follow" />
+            <ContactCard icon={<Phone className="h-5 w-5" />} title="Call" sub={PHONE_DISPLAY} href={`tel:${PHONE_TEL}`} cta="Dial" />
           </div>
         </div>
       </div>
@@ -734,14 +748,14 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">Freelance web developer building premium websites for modern brands. Available worldwide, based in Bengaluru.</p>
             <div className="mt-6 flex gap-2">
               {[
-                { icon: Instagram, href: INSTAGRAM },
-                { icon: Linkedin, href: "https://linkedin.com" },
-                { icon: Github, href: "https://github.com" },
-                { icon: Twitter, href: "https://twitter.com" },
+                { icon: Instagram, href: INSTAGRAM, label: "Instagram" },
+                { icon: Linkedin, href: LINKEDIN, label: "LinkedIn" },
+                { icon: Github, href: GITHUB, label: "GitHub" },
+                { icon: Twitter, href: TWITTER, label: "Twitter / X" },
               ].map((s, i) => {
                 const Icon = s.icon;
                 return (
-                  <a key={i} href={s.href} target="_blank" rel="noreferrer" className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-[image:var(--gradient-brand)] hover:text-white transition-colors">
+                  <a key={i} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label} className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-[image:var(--gradient-brand)] hover:text-white transition-colors">
                     <Icon className="h-4 w-4" />
                   </a>
                 );

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
-import { Hero, Marquee, Stats, SectionLabel } from "@/components/sections";
+import { Hero, Marquee, SectionLabel } from "@/components/sections";
 
 import { ldScripts } from "@/lib/seo";
 
@@ -29,7 +29,7 @@ function HomePage() {
     <PageShell>
       <Hero />
       <Marquee />
-      <Stats />
+      
       <section className="relative py-28 sm:py-36">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
           <SectionLabel>Explore</SectionLabel>
