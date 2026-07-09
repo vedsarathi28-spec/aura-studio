@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/page-shell";
-import { Projects, Testimonials } from "@/components/sections";
+import { Projects, Stats, Testimonials } from "@/components/sections";
 import { ldScripts } from "@/lib/seo";
 
 export const Route = createFileRoute("/work")({
