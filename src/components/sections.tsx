@@ -748,10 +748,10 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">Freelance web developer building premium websites for modern brands. Available worldwide, based in Bengaluru.</p>
             <div className="mt-6 flex gap-2">
               {[
-                { icon: Instagram, href: INSTAGRAM },
-                { icon: Linkedin, href: "https://linkedin.com" },
-                { icon: Github, href: "https://github.com" },
-                { icon: Twitter, href: "https://twitter.com" },
+                { icon: Instagram, href: INSTAGRAM, label: "Instagram" },
+                { icon: Linkedin, href: LINKEDIN, label: "LinkedIn" },
+                { icon: Github, href: GITHUB, label: "GitHub" },
+                { icon: Twitter, href: TWITTER, label: "Twitter / X" },
               ].map((s, i) => {
                 const Icon = s.icon;
                 return (
