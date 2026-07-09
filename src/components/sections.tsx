@@ -99,8 +99,11 @@ export function Hero() {
                       <Sparkles className="h-4 w-4" />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-sm font-semibold truncate">Currently shipping</p>
-                      <p className="text-xs text-muted-foreground truncate">Luxe Lifestyle Co. — E-commerce</p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-sm font-semibold truncate">Luxe Lifestyle Co.</p>
+                        <span className="rounded-full bg-primary/15 text-primary px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider shrink-0">Concept</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground truncate">Concept e-commerce build</p>
                     </div>
                   </div>
                 </div>
