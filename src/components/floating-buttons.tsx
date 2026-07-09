@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUp, MessageCircle } from "lucide-react";
 
-const WHATSAPP = "https://wa.me/919999999999?text=Hi%20Panchariya%20Labs%2C%20I%27d%20like%20to%20discuss%20a%20website%20project.";
+const WHATSAPP = "https://wa.me/917742484927?text=Hi%20Panchariya%20Labs%2C%20I%27d%20like%20to%20discuss%20a%20website%20project.";
 
 export function FloatingButtons() {
   const [show, setShow] = useState(false);
