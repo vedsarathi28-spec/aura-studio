@@ -11,9 +11,16 @@ import orbImg from "@/assets/hero-orb.jpg";
 import logoIcon from "@/assets/panchariya-icon.png.asset.json";
 import { useCountUp } from "@/hooks/use-reveal";
 
-export const WHATSAPP = "https://wa.me/919999999999";
-export const INSTAGRAM = "https://instagram.com/aarav.codes";
-export const EMAIL = "hello@aarav.dev";
+// ─── Quick-edit contact + status constants ───
+export const AVAILABILITY = "Available for new projects · 2 slots open this month";
+export const PHONE_DISPLAY = "+91 77424 84927";
+export const PHONE_TEL = "+917742484927";
+export const WHATSAPP = "https://wa.me/917742484927?text=Hi%20Panchariya%20Labs%2C%20I%27d%20like%20to%20discuss%20a%20website%20project.";
+export const EMAIL = "workwithpp46@gmail.com";
+export const INSTAGRAM = "https://instagram.com/workwithpp";
+export const LINKEDIN = "https://www.linkedin.com/in/codewithpp";
+export const GITHUB = "https://github.com/CodeWithPiyush41";
+export const TWITTER = "https://x.com/workwithpp_";
 
 
 /* ───────────────────────── HERO ───────────────────────── */
